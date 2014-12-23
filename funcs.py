@@ -87,5 +87,15 @@ print
 print fact(1)
 print fact(2)
 print fact(5)
-print '100!=', fact(100)
+#print '100!=', fact(100)
 print '999!=', fact(999)
+
+# 尾递归
+def fact(n):
+    return fact_iter(1,1,n)
+
+def fact_iter(product,count,max):
+    if count > max:
+        return product
+    return fact_iter(product*count,count+1,max)
+print '10!=',fact(10)
