@@ -99,3 +99,4 @@ def fact_iter(product,count,max):
         return product
     return fact_iter(product*count,count+1,max)
 print '10!=',fact(10)
+

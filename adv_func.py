@@ -127,3 +127,25 @@ def calc_sum(*args):
 f = calc_sum(1,3,5,7,9)
 print "f",f
 print "f()",f()
+
+print "匿名函数：lambda"
+def build(x,y):
+    return lambda: x * x + y * y
+f = build(3,5)
+print f
+print f()
+
+def log(func):
+    def wrapper(*args,**kw):
+        print 'call %s(): at ' % func.__name__
+        return func(*args,**kw)
+    return wrapper()
+
+@log
+def now():
+    print '2014-12-30'
+
+print now
+
+
+
