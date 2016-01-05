@@ -1,4 +1,4 @@
 python
 ======
 
-python tricks
+python study
